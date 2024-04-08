@@ -17,7 +17,7 @@ In public environment, use certificates from letsencrypt on server.
 
 # After you're sure you have working certs;
 # Running the .exe's (see releases)
-- Note: Only compiled for linux x86_64. Can supply .exe's for more.
+- Releases are available for Linux x86_64, Linux aarch64 (arm64), Mac OSX Ventura
 - Note: Client only works if the server is using a valid cert signed by a CA like LetsEncrypt. Client uses default system root store.
 - Note: Server supplies valid cert/key pair. Get one from certbot.
 - Note: Server and client both use port 4545 (make sure the server:4545 is accessible for the client).
@@ -33,6 +33,9 @@ Tested on RPI, Mac OS, and Linux x86_64
 `cargo run --bin server -- --ip "0.0.0.0" --port 4545 --cert "<absolute_path_to_cert_file>" --key "<absolute_path_to_key_file>" --backup-dir <dir_to_put_archives>`
 
 `cargo run --bin client -- --host "<server_ip_hostname_certdomain>" --port 4545 --file <absolute_path_of_file_to_send>`
+
+## PLANS
+Client needs to be able to request a file from the server. this shit is so fast.
 
 ## Personal notes
 ### How certs and client-validation of certs works
