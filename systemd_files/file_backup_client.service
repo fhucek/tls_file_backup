@@ -9,5 +9,3 @@ User=frank
 ExecStart=/home/frank/.local/bin/file_backup_client.sh /home/frank
 Restart=never # or always, on-abort, etc
 
-[Install]
-WantedBy=multi-user.target
